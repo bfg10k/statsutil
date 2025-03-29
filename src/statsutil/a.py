@@ -25,7 +25,6 @@ def to_series(metrics: dict) -> dict:
     return {
         "series": [
             {
-                "interval": 10,
                 "metric": name,
                 "type": metric["type"],
                 "points": [
@@ -85,7 +84,6 @@ class Stats:
             self.sending = False
 
         data = to_series(metrics)
-        print(data)
         res = requests.post(self.url, json=data, headers=self.headers)
         if res.status_code != 202:
             raise Exception(f"failed to submit metrics: {res.status_code}, {res.text}")
