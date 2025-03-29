@@ -1,5 +1,5 @@
 [project]
-name = "statsutil"
+name = "bfg-statsutil"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -7,11 +7,13 @@ authors = [
     { name = "Lei Zhao", email = "8961794+leizha@users.noreply.github.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
-
-[project.scripts]
-statsutil = "statsutil:main"
+dependencies = [
+    "requests",
+]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/statsutil"]

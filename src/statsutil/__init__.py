@@ -1,2 +1,3 @@
-def main() -> None:
-    print("Hello from statsutil!")
+from statsutil.a import Stats
+
+__all__ = ["Stats"]
