@@ -1,7 +1,7 @@
 [project]
 name = "bfg-statsutil"
 version = "0.1.0"
-description = "Add your description here"
+description = "A simple library for sending metrics directly to Datadog without requiring an agent installation"
 readme = "README.md"
 authors = [
     { name = "Lei Zhao", email = "8961794+leizha@users.noreply.github.com" }
